@@ -22,7 +22,7 @@ class scriptClass {
     }
 
     greetMethod() {
-        const words = ["Hello!", "Welcome!", "Let's Work Together!", "Let's Build!"];
+        const words = ["Welcome!", "Let's Work Together!", "Let's Build Projects!", "Hello!"];
         let i = 0;
 
         const el = document.getElementById("greetings");
