@@ -71,6 +71,8 @@ class scriptClass {
         const leftText = document.getElementById("left-text");
         document.querySelector(".image").classList.add("show");
         document.querySelector(".left-text").classList.add("show");
+        document.querySelector(".primary-btn").classList.add("show");
+        document.querySelector(".secondary-btn").classList.add("show");
     }
 }
 
