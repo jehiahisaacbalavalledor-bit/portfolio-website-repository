@@ -194,7 +194,7 @@ footer {
 }
 
 .sidebar.active {
-    right: 0; /* Show the sidebar when active if the JS adds "active" next to the */
+    right: 0; /* Show the sidebar when active if the JS adds "active" next to the class="sidebar", making it "class=sidebar active"*/
 }
 
 .sidebar-ul {
@@ -259,7 +259,7 @@ p {
     margin-bottom: 20px;
 }
 
-#greetings { /*To avoid the div jumpint when the text is empty*/
+#greetings { /*To avoid the div jumping*/
     min-height: 120px;
     display: inline-block;
     white-space: nowrap;
@@ -289,12 +289,18 @@ p {
     padding: 10px 20px;
     background-color: rgb(0, 183, 255);
     color: white;
-    border: none;
+    border: white 3px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
     opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    transform: scale(1.2);
+    background-color: rgb(130, 220, 255);
 }
 
 .primary-btn.show {
@@ -313,6 +319,11 @@ p {
     transition: all 0.3s ease;
     text-decoration: none;
     opacity: 0;
+}
+
+.secondary-btn:hover {
+    transform: scale(1.2);
+    background-color: #ff9380;
 }
 
 .secondary-btn.show {
