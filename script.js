@@ -27,23 +27,23 @@ class scriptClass {
 
         const el = document.getElementById("greetings");
 
-        el.textContent = words[3];
-        el.style.opacity = 1;
-        el.style.transform = "translateY(0)";
+        el.textContent = words[3]; // This greets "Hello!" first
+        el.style.opacity = 1; // This makes the opacity of the greeting totally visible
+        el.style.transform = "translateY(0)"; // This makes the text appear immediately unhidden
 
-        setInterval(() => {
+        setInterval(() => { // This sets the interval timing for each greeting showing up. Ex: "Welcome!" shows up for 3 seconds
             el.style.transform = "translateY(-10px)";
             el.style.opacity = 0;
 
-            setTimeout(() => {
+            setTimeout(() => { // This sets the interval for each greeting to show up. Ex: "Hello!" after 1 second, "Welcome!"
                 el.textContent = words[i];
                 el.style.transform = "translateY(0)";
                 el.style.opacity = 1;
 
                 i = (i + 1) % words.length;
-            }, 1000);
+            }, 1000); // 1000ms = 1 second
 
-        }, 3000);
+        }, 3000); // 3000ms = 3 seconds
     }
 
     toggleScrollHeader() {
@@ -51,7 +51,7 @@ class scriptClass {
 
         let lastScrollY = window.scrollY;
 
-        window.addEventListener("scroll", () => {
+        window.addEventListener("scroll", () => { // This listens for an event of scrolling
             const currentScrollY = window.scrollY;
 
             if (currentScrollY > lastScrollY) {
@@ -66,7 +66,7 @@ class scriptClass {
         });
     }
 
-    contentAnimation() {
+    contentAnimation() { // These activate the CSS animations if the hero page loads up
         const image = document.getElementById("image");
         const leftText = document.getElementById("left-text");
         document.querySelector(".image").classList.add("show");
@@ -80,7 +80,7 @@ const run = new scriptClass();
 run.footerYear();
 run.toggleScrollHeader();
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { // DOMContentLoaded event listener is used here to activate the animations when the website loads up immediately
     run.greetMethod();
 });
 
