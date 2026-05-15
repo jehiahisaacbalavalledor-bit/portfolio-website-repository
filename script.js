@@ -66,6 +66,18 @@ class scriptClass {
         });
     }
 
+    age() {
+        const birthDate = new Date("2006-06-30");
+        const currentDate = new Date();
+        let age = currentDate.getFullYear() - birthDate.getFullYear();
+        const monthDifference = currentDate.getMonth() - birthDate.getMonth();
+        const dayDifference = currentDate.getDate() - birthDate.getDate();
+        if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+            age--;
+        }
+        document.getElementById("my-age").textContent = age;
+    }
+
     contentAnimation() { // These activate the CSS animations if the hero page loads up
         const image = document.getElementById("image");
         const leftText = document.getElementById("left-text");
@@ -79,6 +91,10 @@ class scriptClass {
 const run = new scriptClass();
 run.footerYear();
 run.toggleScrollHeader();
+
+document.addEventListener("DOMContentLoaded", () => {
+    run.age();
+});
 
 document.addEventListener("DOMContentLoaded", () => { // DOMContentLoaded event listener is used here to activate the animations when the website loads up immediately
     run.greetMethod();
