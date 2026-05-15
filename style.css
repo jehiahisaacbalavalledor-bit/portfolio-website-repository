@@ -115,6 +115,22 @@ section {
     color: white;
 }
 
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    width: 320px;
+    height: 450px;
+    border: 2px solid white;
+    border-radius: 10px;
+    justify-content: center;
+    gap: 20px;
+}
+
 /*LITERACY PROGRESS BAR*/
 .literacy-container {
     display: flex;
