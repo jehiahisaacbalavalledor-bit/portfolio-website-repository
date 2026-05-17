@@ -95,6 +95,11 @@ section {
     justify-content: center;
     gap: 20px;
     color: white;
+    transition: all 0.3s ease;
+}
+
+.skills:hover {
+    transform: scale(1.1);
 }
 
 .experiences-container {
@@ -113,6 +118,11 @@ section {
     justify-content: center;
     gap: 20px;
     color: white;
+    transition: all 0.3s ease;
+}
+
+.experience:hover {
+    transform: scale(1.1);
 }
 
 .projects-container {
@@ -124,11 +134,16 @@ section {
 
 .project {
     width: 320px;
-    height: 450px;
+    height: 480px;
     border: 2px solid white;
     border-radius: 10px;
     justify-content: center;
     gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.1);
 }
 
 /*LITERACY PROGRESS BAR*/
@@ -150,6 +165,11 @@ section {
     padding: 12px;
     color: white;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.literacy:hover {
+    transform: scale(1.1);
 }
 
 .progress {
